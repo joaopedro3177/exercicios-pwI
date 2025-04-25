@@ -339,3 +339,152 @@ form button {
 }
 
 }
+
+/* Página login página */
+
+.pagina-login-body {
+  font-family: var(--fonte-padrao);
+  background: url('../assets/bg-2.png') center center / cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.pagina-login-header {
+  background-color: var(--cor-principal);
+  width: 90%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.pagina-login-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+
+.pagina-login-nav-esquerda {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.pagina-login-logo {
+  height: 40px;
+}
+
+.pagina-login-menu {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.pagina-login-menu a {
+  color: var(--cor-texto-claro);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pagina-login-links {
+  display: flex;
+  gap: 15px;
+  justify-content: right;
+}
+
+.pagina-login-links a {
+  color: var(--cor-texto-claro);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Main */
+.pagina-login-main {
+  flex: 1;
+  margin-top: 80px; /* espaço pro header fixo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.pagina-login-form {
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 300px;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  
+}
+
+.pagina-login-titulo {
+  text-align: center;
+  color: var(--cor-borda);
+  margin-bottom: 10px;
+}
+
+.pagina-login-input {
+  padding: 10px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 5px;
+  background-color: transparent; /* campo transparente */
+  color: var(--cor-borda);
+  background-color: white;
+}
+
+.pagina-login-input::placeholder {
+  color: #888;
+}
+
+.pagina-login-opcoes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.pagina-login-erro {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
+
+.pagina-login-botao {
+  background-color: #0080c0;
+  color: var(--cor-texto-claro);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .pagina-login-nav {
+    justify-content: center;
+  }
+
+  .pagina-login-nav-esquerda {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .pagina-login-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pagina-login-links {
+    margin-top: 10px;
+    justify-content: center;
+  }
+}
+
