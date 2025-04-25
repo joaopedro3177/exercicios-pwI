@@ -1,30 +1,29 @@
+/* Reset e variáveis */
 @import url('../css/reset.css');
 @import url('../css/variables.css');
 
-/* Página Home */
+/* BODY - HOME */
 body.pagina-home {
-  padding: 20px;
-  font-family: var(--fonte-padrao);
+  font-family: Arial, sans-serif;
   background: url('../assets/bg-2.png') no-repeat center center fixed;
   background-size: cover;
   padding-top: 80px;
 }
 
-/* Header fixo */
+/* HEADER */
 header {
-  background-color: var(--cor-principal);
-  color: var(--cor-texto-claro);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  margin: 0 65px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 70px;
   z-index: 1000;
+  height: 70px;
+  background-color: var(--cor-principal);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 65px;
+  margin:  0 50px;
 }
 
 .menu-esquerdo {
@@ -38,30 +37,24 @@ header {
   margin-right: 20px;
 }
 
-nav a {
-  color: var(--cor-texto-claro);
+nav a, .menu-direito a {
+  color: white;
   text-decoration: none;
-  margin-right: 20px;
+  margin: 0 10px;
   font-size: 14px;
 }
 
-.menu-direito a {
-  color: var(--cor-texto-claro);
-  text-decoration: none;
-  margin-left: 15px;
-  font-size: 14px;
-}
-
-/* Conteúdo principal */
+/* CONTEÚDO PRINCIPAL */
 .conteudo {
   display: flex;
   flex-wrap: wrap;
   width: 90%;
   margin: auto;
   margin-top: 20px;
+  position: relative;
 }
 
-/* Produtos */
+/* PRODUTOS */
 .produtos {
   flex: 3;
 }
@@ -97,7 +90,7 @@ nav a {
 }
 
 .produto input[type="button"] {
-  background-color: var(--cor-botao);
+  background-color: red;
   color: white;
   border: none;
   padding: 8px 15px;
@@ -105,51 +98,51 @@ nav a {
   cursor: pointer;
 }
 
-/* Sidebar */
+/* SIDEBAR */
 .sidebar {
   flex: 1;
   margin-left: 20px;
   display: flex;
   flex-direction: column;
-}
-
-/* Tutoriais */
-.tutoriais-container {
-  background-color: white;
-  padding: 20px;
-  margin-bottom: 20px;
-  border: 1px solid var(--cor-borda);
+  position: relative;
 }
 
 .sidebar h3 {
-  margin-bottom: 15px;
   background: white;
   padding: 15px;
-  border: 1px solid var(--cor-borda);
+  margin-bottom: 15px;
+  border: 1px solid black;
+}
+
+/* TUTORIAIS */
+.tutoriais-container {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid black;
 }
 
 .tutorial {
   display: flex;
-  text-align: center;
+  align-items: center;
   margin-bottom: 15px;
 }
 
 .tutorial img {
-  width: 100%;
+  width: 30%;
+  margin-right: 10px;
 }
 
 .tutorial p {
   font-size: 12px;
   font-weight: bold;
-  margin-top: 8px;
-  margin-left: 10px;
 }
 
-/* Publicidade */
+/* PUBLICIDADE */
 .publicidade-container {
   background: white;
   padding: 20px;
-  border: 1px solid var(--cor-borda);
+  border: 1px solid black;
 }
 
 .publicidade img {
@@ -157,10 +150,11 @@ nav a {
   margin-bottom: 10px;
 }
 
-/* Responsivo */
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
+    align-items: center;
     height: auto;
     padding: 10px;
   }
@@ -169,12 +163,6 @@ nav a {
   .menu-direito {
     flex-direction: column;
     align-items: center;
-  }
-
-  .menu-esquerdo nav a,
-  .menu-direito a {
-    margin: 10px 0;
-    font-size: 16px;
   }
 
   .conteudo {
@@ -192,9 +180,10 @@ nav a {
   }
 
   .sidebar {
-    margin-top: 20px;
+    margin: 20px 0 0 0;
   }
 }
+
 
 
 /* Página Registro */
