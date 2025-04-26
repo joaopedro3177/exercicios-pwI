@@ -1,2 +1,5 @@
 # Projeto da PWL8
-Os componentes do projeto são Felipe da silva freitas,João pedro simião dos santos e Homero Duarte Linakis
+Os Integrantes do projeto são: 
+Felipe da silva Freitas
+João Pedro Simião dos santos 
+Homero Duarte Linakis
