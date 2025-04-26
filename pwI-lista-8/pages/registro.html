@@ -1,83 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar</title>
-    <link rel="stylesheet" href="../css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar - Craftsy</title>
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body class="pagina-registro">
-    
-    <header class="aba">
-        <div class="menu">
-            <div class="logo">
-                <img src="../assets/logo.png" alt="">
-            </div>
-            <span>SMARTPHONES</span>
-            <span>TABLETS</span>
-            <span>Computadores</span>
-        </div>
-        <div class="auth">
-            <a href="../indexx.html">Home</a>
-            <a href="login.html"> Login</a>
-        </div>
-    </header>
+<body class="pagina-registrar-body">
+  
+  <header class="pagina-registrar-header">
+    <nav class="pagina-registrar-nav">
+      <div class="pagina-registrar-nav-esquerda">
+        <img src="../assets/logo.png" alt="Craftsy" class="pagina-registrar-logo">
+        <ul class="pagina-registrar-menu">
+          <li><a href="#">SMARTPHONES</a></li>
+          <li><a href="#">TABLETS</a></li>
+          <li><a href="#">COMPUTADORES</a></li>
+        </ul>
+      </div>
+      <div class="pagina-registrar-links">
+        <a href="login.html">LOGIN</a>
+        <a href="../indexx.html">HOME</a>
+      </div>
+    </nav>
+  </header>
 
-    <main>
-        <h2>Registrar</h2>
-        <form>
-            <label for="nome">
-                <input type="text" name="nome" placeholder="Seu nome aqui">
-                <div class="obrigatorio">obrigatorio.</div>      
-            </label>
+  <main class="pagina-registrar-main">
+    <form class="pagina-registrar-form">
+      <h1 class="pagina-registrar-titulo">REGISTRAR</h1>
 
-            <label for="email">
-                <input type="email" name="email"placeholder="email@email.com">
-                <div class="obrigatorio">obrigatorio.</div>
-            </label>
-            <label for="senha">
-                <input type="password" name="senha" placeholder="senha">
-                <div class="obrigatorio">obrigatorio.</div>
-            </label>
+      <input type="text" class="pagina-registrar-input" placeholder="Nome" required>
 
-            <label>país de Nascimento
-                <select name="país">
-                <option>Brasil</option>
-                <option>Alemanha</option>
-                <option>Espanha</option>
-                <option>Inglaterra</option>
-            </select>
-            <div class="obrigatorio">obrigatorio.</div>
-            </label>
+      <input type="email" class="pagina-registrar-input" placeholder="Email" required>
 
-            <label for="Genêro">
-                <div class="radio-agroup">
-                  <label> <input type="radio" name="Genêro"> Masculino</label>
-                  <label> <input type="radio" name="Genêro"> Feminino</label>
-                  <label> <input type="radio" name="Genêro">Prefiro não dizer</label>
-                </div>
+      <input type="password" class="pagina-registrar-input" placeholder="Senha" required>
 
-            <label>Hobbies</label>
-            <div class="checkbox-group">
-                <label> <input type="checkbox" name="Hobbies">Guitarra</label>
-                <label> <input type="checkbox" name="Hobbies">Futebol</label>
-                <label> <input type="checkbox" name="Hobbies">Tênis</label>
-                <label> <input type="checkbox" name="Hobbies">Programação</label>
-            </div>
+      <label for="pais" class="pagina-registrar-label">País de nascimento</label>
+      <select id="pais" class="pagina-registrar-input" required>
+        <option value="">Selecione</option>
+        <option value="Brasil">Brasil</option>
+        <option value="Chile">Chile</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Uruguai">Uruguai</option>
+      </select>
 
-            <label> Comentários
-                <textarea name="Comentários"></textarea>
-            </label>
+      <div class="pagina-registrar-campo">
+        <span class="pagina-registrar-label">Gênero</span>
+        <label><input type="radio" name="genero" value="Masculino" required> Masculino</label>
+        <label><input type="radio" name="genero" value="Feminino" required> Feminino</label>
+        <label><input type="radio" name="genero" value="Prefiro não dizer" required> Prefiro não dizer</label>
+      </div>
 
-            <div class="checkbox-group">
-                <label><input type="checkbox" name="termos"> Aceito os termos e condições.</label>
-            </div>
-            
-            <div class="buttons">
-                <input type="submit" value="Registrar">
-                <input type="button" value="Cancelar">
-            </div>
-        </form>
-    </main>
+      <div class="pagina-registrar-campo">
+        <span class="pagina-registrar-label">Hobbies</span>
+        <label><input type="checkbox" name="hobbies" value="Guitarra"> Guitarra</label>
+        <label><input type="checkbox" name="hobbies" value="Futebol"> Futebol</label>
+        <label><input type="checkbox" name="hobbies" value="Tênis"> Tênis</label>
+        <label><input type="checkbox" name="hobbies" value="Programação"> Programação</label>
+      </div>
+
+      <textarea class="pagina-registrar-textarea" placeholder="Comentários"></textarea>
+
+      <div class="pagina-registrar-termos">
+        <label><input type="checkbox" required> Aceito os termos e condições.</label>
+      </div>
+
+      <div class="pagina-registrar-botoes">
+        <button type="submit" class="pagina-registrar-botao">Registrar</button>
+        <button type="reset" class="pagina-registrar-botao cancelar">Cancelar</button>
+      </div>
+
+    </form>
+  </main>
+
 </body>
-</html>
+</html> 

@@ -187,157 +187,194 @@ nav a, .menu-direito a {
 
 
 /* Página Registro */
-body.pagina-registro {
+
+.pagina-registrar-body {
   font-family: var(--fonte-padrao);
-  background: url('../assets/bg-2.png') no-repeat center center fixed;
-  background-size: cover;
-  padding-top: 100px;
-  color: var(--cor-texto-escuro);
-  
-  /* Header fixo */
-  .aba{
-    background-color: var(--cor-principal);
-    color: var(--cor-texto-claro);
-    display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  margin: 0 65px;
+  background: url('../assets/bg-2.png') center center / cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.pagina-registrar-header {
+  background-color: var(--cor-principal);
+  width: 90%;
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  height: 70px;
+  left: 0px;
   z-index: 1000;
 }
 
-.menu, .auth {
+.pagina-registrar-nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
+.pagina-registrar-nav-esquerda {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
-.menu span {
-  margin-right: 20px;
-  font-size: 14px;
+.pagina-registrar-logo {
+  height: 40px;
+}
+
+.pagina-registrar-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.pagina-registrar-menu a {
   color: var(--cor-texto-claro);
-}
-
-.auth a {
-  margin-left: 15px;
   text-decoration: none;
+  font-weight: bold;
+}
+
+.pagina-registrar-links {
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+}
+
+.pagina-registrar-links a {
   color: var(--cor-texto-claro);
-  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-/* Conteúdo principal */
-main {
-  background-color: transparent;
-  width: 90%;
-  max-width: 600px;
-  margin: auto;
+/* Main */
+.pagina-registrar-main {
+  flex: 1;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-main h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 26px;
-}
-
-form {
-  background-color: transparent;
+.pagina-registrar-form {
+  padding: 30px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  min-width: 300px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  background-color: transparent;
 }
 
-form label {
-  display: flex;
-  flex-direction: column;
-  font-weight: bold;
-  font-size: 14px;
+.pagina-registrar-titulo {
+  text-align: center;
+  color: var(--cor-borda);
+  margin-bottom: 10px;
 }
 
-form input[type="text"],
-form input[type="email"],
-form input[type="password"],
-form select,
-form textarea {
+.pagina-registrar-input,
+.pagina-registrar-textarea,
+.pagina-registrar-select {
   padding: 10px;
   border: 1px solid var(--cor-borda);
   border-radius: 5px;
-  font-size: 14px;
+  background-color: transparent;
+  color: var(--cor-borda);
+  width: 100%;
+  background-color: white;
 }
 
-.obrigatorio {
-  color: red;
-  font-size: 12px;
+.pagina-registrar-textarea {
+  resize: vertical;
+  min-height: 100px;
 }
 
-/* Grupos de inputs */
-.radio-agroup,
-.checkbox-group {
+.pagina-registrar-input::placeholder,
+.pagina-registrar-textarea::placeholder {
+  color: #888;
+}
+
+.pagina-registrar-label {
+  font-weight: bold;
+  color: var(--cor-borda);
+}
+
+.pagina-registrar-campo {
   display: flex;
-  flex-wrap: wrap;
   gap: 10px;
-  margin-top: 5px;
+  background: transparent;
 }
 
-/* Botões */
-form .buttons {
+.pagina-registrar-campo label {
+  background: transparent;
   display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: var(--cor-borda);
+}
+
+.pagina-registrar-campo input[type="radio"],
+.pagina-registrar-campo input[type="checkbox"] {
+  accent-color: var(--cor-principal); /* corzinha dos botões */
+  background: transparent;
+}
+
+
+.pagina-registrar-campo label {
+  font-size: 14px;
+}
+
+.pagina-registrar-termos {
+  font-size: 14px;
+}
+
+.pagina-registrar-botoes {
+  display: flex;
+  justify-content: space-between;
   gap: 10px;
-  margin-top: 10px;
 }
 
-/* Botões com input */
-form input[type="submit"],
-form input[type="button"] {
-  background-color: var(--cor-botao);
-  color: white;
+.pagina-registrar-botao {
+  background-color: #0080c0;
+  color: var(--cor-texto-claro);
   border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-size: 14px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
   cursor: pointer;
+  flex: 1;
 }
 
-/* Botões com <button> */
-form button {
-  background-color: var(--cor-botao);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-size: 14px;
-  cursor: pointer;
-  margin-top: 10px;
-  margin-right: 10px;
+.pagina-registrar-botao.cancelar {
+  background-color: gray;
 }
 
 /* Responsivo */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
-  .menu, .auth {
+@media (max-width: 600px) {
+  .pagina-registrar-nav {
     flex-direction: column;
     align-items: center;
   }
 
-  .menu span, .auth a {
-    margin: 10px 0;
-    font-size: 16px;
+  .pagina-registrar-nav-esquerda {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
-  main {
-    width: 95%;
+  .pagina-registrar-links {
+    margin-left: 0;
+    margin-top: 10px;
+    justify-content: center;
   }
-}
-
 }
 
 /* Página login página */
@@ -487,4 +524,3 @@ form button {
     justify-content: center;
   }
 }
-
