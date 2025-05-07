@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #32085a;
+    width: 100vw;
+    height: 100vh;
+    padding: 10px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navegacao{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+.navegacao img{
+    width: 20%;
+    
+
+}
+
+.navegacao ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+    position: relative;
+    right: 100px;
+}
