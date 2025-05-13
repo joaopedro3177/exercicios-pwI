@@ -1,35 +1,135 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: #32085a;
-    width: 100vw;
-    height: 100vh;
-    padding: 10px 30px;
-    font-family: Arial, Helvetica, sans-serif;
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+  background: #14002c;
+  color: white;
+  display: flex;
+  flex-direction: column;
 }
 
-.navegacao{
-    display: flex;
-    justify-content: space-between;
-    
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
 }
 
-
-.navegacao img{
-    width: 20%;
-    
-
+.logo {
+  height: 45px;
 }
 
-.navegacao ul{
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    font-size: 18px;
-    position: relative;
-    right: 100px;
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.signup {
+  background: white;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+section {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #24004d, #3a0066);
+  border-radius: 20px;
+  padding: 32px;
+  gap: 32px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text {
+  flex: 1;
+}
+
+.text span {
+  background: #a266ff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  display: inline-block;
+  margin-bottom: 16px;
+  color: black;
+}
+
+.text h1 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.text p {
+  margin-bottom: 24px;
+  color: #ccc;
+}
+
+.text button {
+  background: white;
+  color: black;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+
+  /*Não consegui colocar a seta com fundo preto*/
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image {
+    order: -1;
+  }
 }
