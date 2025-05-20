@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ex01
+        let total = 0;
+        for (let i = 0; i < 5; i++) {
+            total += Number(prompt("Digite um número:"));
+        }
+        alert("Soma: " + total);
+
+        //ex02
+        let tab = Number(prompt("Número da tabuada:"));
+        for (let i = 1; i <= 10; i++) {
+            console.log(`${tab} x ${i} = ${tab * i}`);
+        }
+
+        //ex03
+        let i = 10;
+            while (i >= 1) {
+            console.log(i);
+            i--;
+        }
+
+        //ex04
+        let somaTotal = 0;
+        let num2;
+        do {
+            num2 = Number(prompt("Digite um número (0 para parar):"));
+            somaTotal += num2;
+        } while (num2 !== 0);
+        alert("Soma final: " + somaTotal);
+
+        //ex05
+        let palavra = prompt("Digite uma palavra:");
+        for (let i = 0; i < palavra.length; i++) {
+            console.log(palavra[i]);
+        }
+    </script>
+</body>
+</html>

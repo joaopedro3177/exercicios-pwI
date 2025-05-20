@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ex01
+        let notaFinal = Number(prompt("Nota final:"));
+        alert(notaFinal >= 6 ? "Aprovado" : "Reprovado");
+
+        //ex02
+        let x = Number(prompt("Número 1:"));
+        let y = Number(prompt("Número 2:"));
+        let op = prompt("Operação (+ - * /):");
+        if (op === "+") alert(x + y);
+        else if (op === "-") alert(x - y);
+        else if (op === "*") alert(x * y);
+        else if (op === "/") alert(x / y);
+        else alert("Operação inválida");
+
+        //ex03
+        let idade3 = Number(prompt("Idade:"));
+        if (idade3 < 12) alert("Criança");
+        else if (idade3 < 18) alert("Adolescente");
+        else if (idade3 < 60) alert("Adulto");
+        else alert("Idoso");
+
+        //ex04
+        let n1c = Number(prompt("Número 1:"));
+        let n2c = Number(prompt("Número 2:"));
+        if (n1c > n2c) alert("Maior: " + n1c);
+        else if (n2c > n1c) alert("Maior: " + n2c);
+        else alert("Iguais");
+
+        //ex05
+        let peso = Number(prompt("Peso (kg):"));
+        let alturaIMC = Number(prompt("Altura (m):"));
+        let imc = peso / (alturaIMC * alturaIMC);
+        alert("IMC: " + imc.toFixed(2));
+    </script>
+</body>
+</html>

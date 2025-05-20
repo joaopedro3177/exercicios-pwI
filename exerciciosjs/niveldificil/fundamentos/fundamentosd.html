@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ex01
+        let frase = prompt("Digite uma frase:");
+        let palavras = frase.trim().split(" ");
+        alert("Total de palavras: " + palavras.length);
+
+        //ex02
+        let numF = Number(prompt("Número para fatorial:"));
+        let fat = 1;
+        for (let i = 1; i <= numF; i++) {
+            fat *= i;
+        }
+        alert("Fatorial: " + fat);
+
+        //ex03
+        let aleatorio = Math.floor(Math.random() * 100) + 1;
+        alert("Número aleatório: " + aleatorio);
+
+        //ex04
+        let nomeInv = prompt("Digite seu nome:");
+        alert(nomeInv.split("").reverse().join(""));
+
+        //ex05
+        let reais = Number(prompt("Valor em reais:"));
+        let dolar = reais / 5;
+        alert("Valor em dólar: $" + dolar.toFixed(2));
+    </script>
+</body>
+</html>

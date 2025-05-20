@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ex01
+        let a = Number(prompt("Número 1:"));
+        let b = Number(prompt("Número 2:"));
+        alert("Soma: " + (a + b));
+        alert("Subtração: " + (a - b));
+        alert("Multiplicação: " + (a * b));
+        alert("Divisão: " + (a / b));
+
+        //ex02
+        let celsius = Number(prompt("Graus Celsius:"));
+        let fahrenheit = (celsius * 9/5) + 32;
+        alert("Fahrenheit: " + fahrenheit);
+
+        //ex03
+        let base = Number(prompt("Base:"));
+        let altura = Number(prompt("Altura:"));
+        alert("Área: " + (base * altura));
+
+        //ex04
+        let nome4 = prompt("Nome:");
+        let nota = Number(prompt("Nota:"));
+        alert(`Nome: ${nome4}, Nota: ${nota}, Aprovado: ${nota >= 6}`);
+
+        //ex05
+        let nome5 = prompt("Nome:");
+        let sobrenome = prompt("Sobrenome:");
+        alert("Nome completo: " + nome5 + " " + sobrenome);
+    </script>
+</body>
+</html>

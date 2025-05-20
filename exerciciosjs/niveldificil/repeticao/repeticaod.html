@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ex01  //tive que pesquisar nao estava conseguindo fazer esses 5
+        let secreto = Math.floor(Math.random() * 10) + 1;
+        let chute;
+        do {
+            chute = Number(prompt("Adivinhe o número de 1 a 10:"));
+        } while (chute !== secreto);
+        alert("Acertou!");
+
+        //ex02
+        let palavra2 = prompt("Digite uma palavra:");
+        let cont = 0;
+        for (let letra of palavra2.toLowerCase()) {
+            if ("aeiou".includes(letra)) cont++;
+        }
+        alert("Vogais: " + cont);
+
+        //ex03
+        let somaImp = 0;
+        for (let i = 1; i <= 50; i += 2) {
+            somaImp += i;
+        }
+        alert("Soma dos ímpares: " + somaImp);
+
+        //ex04
+        for (let i = 2; i <= 100; i++) {
+            let primo = true;
+            for (let j = 2; j < i; j++) {
+                if (i % j === 0) {
+                primo = false;
+                break;
+            }
+        }
+        if (primo) console.log(i);
+    }
+
+    //ex05
+    let opcao;
+    do {
+        opcao = prompt("Digite uma opção:\n1-Ver algo\n2-Fazer algo\nsair - Encerrar");
+        alert("Você escolheu: " + opcao);
+    } while (opcao !== "sair");
+    </script>
+</body>
+</html>

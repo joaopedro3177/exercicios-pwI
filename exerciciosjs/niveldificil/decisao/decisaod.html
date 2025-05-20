@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //ex01
+        let cpf = prompt("Digite seu CPF:");
+        if (cpf.length === 11) alert("CPF válido");
+        else alert("CPF inválido");
+
+        //ex02
+        let notaC = Number(prompt("Nota:"));
+        if (notaC >= 9) alert("A");
+        else if (notaC >= 7) alert("B");
+        else if (notaC >= 5) alert("C");
+        else alert("D");
+
+        //ex03
+        let p1 = prompt("Jogador 1: pedra/papel/tesoura");
+        let p2 = prompt("Jogador 2: pedra/papel/tesoura");
+        if (p1 === p2) alert("Empate");
+        else if (
+            (p1 === "pedra" && p2 === "tesoura") ||
+            (p1 === "tesoura" && p2 === "papel") ||
+            (p1 === "papel" && p2 === "pedra")
+        ) alert("Jogador 1 venceu");
+        else alert("Jogador 2 venceu");
+
+        //ex04
+        let ano = Number(prompt("Digite o ano:"));
+        if ((ano % 4 === 0 && ano % 100 !== 0) || ano % 400 === 0) {
+            alert("Ano bissexto");
+        } else {
+            alert("Não é bissexto");
+        }
+
+        //ex05
+        let l1 = Number(prompt("Lado 1:"));
+        let l2 = Number(prompt("Lado 2:"));
+        let l3 = Number(prompt("Lado 3:"));
+        if (l1 + l2 > l3 && l1 + l3 > l2 && l2 + l3 > l1) {
+            alert("Forma um triângulo");
+        } else {
+            alert("Não forma triângulo");
+        }
+    </script>
+</body>
+</html>
